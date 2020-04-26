@@ -10,6 +10,8 @@ eureka:
   client:  # Not a client, don't register with yourself
     registerWithEureka: false
     fetchRegistry: false
+    serviceurl:
+        defaultzone: localhost
 
 server:
   port: 1111   # HTTP (Tomcat) port
@@ -20,3 +22,7 @@ spring:
     enabled: false     # Disable Thymeleaf 
   datasource:
     type: org.springframework.jdbc.datasource.SimpleDriverDataSource
+
+registration:
+    server:
+      hostname: localhost
